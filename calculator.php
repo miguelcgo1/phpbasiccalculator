@@ -7,13 +7,17 @@
     <title>A basic calculator</title>
 </head>
 <body>
-    <form action="calculator.php" method="get">
+    <form action="calculator.php" method="post">
         <input type="number" name="num1">
         <input type="number" name="num2">
         <input type="submit">
     </form>
 
-    Answer: <?php echo $_GET["num1"] + $_GET["num2"] ?>
+    <?php
+    $n1 = $_POST["num1"];
+    $n2 = $_POST["num2"];
+    echo $n1+$n2;
+    ?>
 
 </body>
 </html>
